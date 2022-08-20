@@ -1,0 +1,35 @@
+/* ==[ FONTS ]== */
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+/* ==[ VARIABLES ]== */
+@import "variables";
+
+/* ==[ BOOTSWATCH ]== */
+@import "~bootswatch/dist/lux/variables";
+
+/* ==[ BOOTSTRAP ]== */
+// @import "~bootstrap/scss/bootstrap";
+@import "vendors/bootstrap";
+
+/* ==[ BOOTSWATCH ]== */
+@import "~bootswatch/dist/lux/bootswatch";
+
+/* ==[ BASE ]== */
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    display: block;
+    flex: 1 0 auto;
+}
+
+// Index
+.index-page {
+    &::after {
+        content: "";
+    }
+}
