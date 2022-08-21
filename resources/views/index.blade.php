@@ -2,6 +2,10 @@
 
 @section('page-class', 'index-page')
 
+@section('header')
+    @include('includes.header', ['headerTitle' => 'Intro'])
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -20,4 +24,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('footer')
+    @include('includes.footer', ['enableAbout' => false])
 @endsection

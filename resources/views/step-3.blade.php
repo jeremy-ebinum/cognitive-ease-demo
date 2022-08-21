@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
-@section('page-class', 'index-page')
+@section('page-class', 'step-3-page')
+
+@section('header')
+    @include('includes.header', ['headerTitle' => 'Step 3'])
+@endsection
 
 @section('content')
     <div class="container">
@@ -23,4 +27,9 @@
             </div>
         </div>
     </div>
+@endsection
+
+
+@section('footer')
+    @include('includes.footer', ['enableAbout' => false])
 @endsection

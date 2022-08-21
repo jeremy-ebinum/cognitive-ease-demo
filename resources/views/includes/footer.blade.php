@@ -1,9 +1,18 @@
 <footer class="footer mt-auto">
     <div class="container col-md-10 d-flex flex-wrap justify-content-around align-items-center py-3">
         <p class="mb-0 text-light">&copy; {{ date('Y') }} </p>
-        <button type="button" class="btn btn-light text-uppercase"
-                data-bs-toggle="modal"
-                data-bs-target="#aboutModal">About</button>
+
+        {{-- About Button --}}
+        <span class="d-inline-block" tabindex="0" data-toggle="tooltip"
+              title="Please complete survey to view. Begin by clicking the 'Start' button.">
+            <button type="button" class="btn btn-light text-uppercase"
+                    data-bs-toggle="modal"
+                    data-bs-target="#aboutModal"
+                    {{ $enableAbout ? '' : 'disabled' }}>
+                About
+            </button>
+        </span>
+
     </div>
 </footer>
 

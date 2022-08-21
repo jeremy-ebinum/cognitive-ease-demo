@@ -32,11 +32,11 @@
 </head>
 
 <body class="@yield('page-class')">
-    @include('includes.navbar')
+    @yield('header')
 
     @yield('content')
 
-    @include('includes.footer')
+    @yield('footer')
 
     @yield('body-scripts')
 </body>
