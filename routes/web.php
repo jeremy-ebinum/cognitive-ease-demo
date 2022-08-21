@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\StartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,6 @@ use App\Http\Controllers\PageController;
 */
 
 // Landing Page
-Route::get('/', [PageController::class, 'index'])->name('index');
+Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/start', [StartController::class, 'start'])->name('start');
+Route::post('/start', [StartController::class, 'next'])->name('next');
