@@ -32,14 +32,11 @@
 </head>
 
 <body class="@yield('page-class')">
+    @include('includes.navbar')
+
     @yield('content')
 
-    <footer class="footer mt-auto">
-        <div class="container d-flex flex-wrap justify-content-around align-items-center py-3">
-            <p class="mb-0 text-muted">&copy; {{ date('Y') }} </p>
-        </div>
-    </footer>
-
+    @include('includes.footer')
 
     @yield('body-scripts')
 </body>
