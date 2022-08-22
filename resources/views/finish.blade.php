@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Cognitive Ease Demo')
+
 @section('page-class', 'finish-page')
 
 @section('header')
