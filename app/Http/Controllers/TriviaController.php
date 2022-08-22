@@ -22,11 +22,8 @@ class TriviaController extends Controller
             return redirect('/');
         }
 
-        // $uuid = Str::uuid()->toString();
-        // $startTime = now();
-
         $store = json_decode(Cookie::get($storeName), true);
-        $isFinished = isset($store['isFinished']);
+        $isFinished = $store['isFinished'] === true;
 
         return $isFinished ? redirect('/') : view('question-1');
     }
