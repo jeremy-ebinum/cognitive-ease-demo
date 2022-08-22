@@ -4,10 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
-use Illuminate\Support\Str;
 
 class TriviaController extends Controller
 {
+
+    private string $storeName;
+    private int $storeTime;
+
+    public function __construct()
+    {
+        $this->storeName = config('constants.STORE_NAME');
+        $this->storeTime = config('constants.STORE_TIME');
+    }
+
     /**
      * Begin the trivia
      *
@@ -15,15 +24,17 @@ class TriviaController extends Controller
      */
     public function start()
     {
-        $storeName = config('constants.STORE_NAME');
-
-
-        if (!Cookie::has($storeName)) {
+        if (!Cookie::has($this->storeName)) {
             return redirect('/');
         }
 
-        $store = json_decode(Cookie::get($storeName), true);
+        $store = json_decode(Cookie::get($this->storeName), true);
         $isFinished = $store['isFinished'] === true;
+
+        // startTime for Trivia
+        $store['startTime'] = now();
+        Cookie::queue($this->storeName, json_encode($store), $this->storeTime);
+
 
         return $isFinished ? redirect('/') : view('question-1');
     }
@@ -35,14 +46,11 @@ class TriviaController extends Controller
      */
     public function next(Request $request)
     {
-        $storeName = config('constants.STORE_NAME');
-        $storeTime = config('constants.STORE_TIME');
-
-        if (!Cookie::has($storeName)) {
+        if (!Cookie::has($this->storeName)) {
             return redirect('/');
         }
 
-        $store = json_decode(Cookie::get($storeName), true);
+        $store = json_decode(Cookie::get($this->storeName), true);
 
         $next = $request->input('next');
         $choice = $request->input('choice');
@@ -58,9 +66,10 @@ class TriviaController extends Controller
             case 5:
                 return view('question-5');
             case -1:
-                // Set the isFinished flag to true so user can't redo trivia
-                $store['isFinished'] =  true;
-                Cookie::queue($storeName, json_encode($store), $storeTime);
+                $store['isFinished'] =  true; // So user can't redo trivia
+                $store['endTime'] = now(); // endTime for Trivia
+
+                Cookie::queue($this->storeName, json_encode($store), $this->storeTime);
 
                 return view('finish');
             default:
