@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Cognitive Ease Demo') }}@yield('titleSuffix')</title>
+    <title>@yield('title')</title>
 
     {{-- FAVICON --}}
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
@@ -23,22 +23,44 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
 
         <!-- Fonts -->
-        <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @show
+
+    <script>
+        /* Fix for Firefox FOUC (Flash of Unstyled Content) */
+        let FF_FOUC_FIX;
+    </script>
 </head>
 
-<body class="@yield('page-class')">
+<body class="@yield('page-class')" style="opacity: 0">
     @yield('header')
 
     @yield('content')
 
     @yield('footer')
 
+    @include('includes.helper-js')
+
     @yield('body-scripts')
+
+    <script>
+        onDomReady(() => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body {
+                opacity: 1;
+            }
+        </style>
+    </noscript>
 </body>
 
 </html>

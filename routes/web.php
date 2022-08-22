@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\StartController;
+use App\Http\Controllers\TriviaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +18,5 @@ use App\Http\Controllers\StartController;
 
 // Landing Page
 Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('/start', [StartController::class, 'start'])->name('start');
-Route::post('/start', [StartController::class, 'next'])->name('next');
+Route::get('/trivia', [TriviaController::class, 'start'])->name('start');
+Route::post('/trivia', [TriviaController::class, 'next'])->name('next');

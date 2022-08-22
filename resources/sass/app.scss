@@ -20,6 +20,10 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+
+    transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -webkit-transition: opacity 0.5s ease-in;
 }
 
 // Index
@@ -29,36 +33,36 @@ body {
     }
 }
 
-// Step 1
-.step-1-page {
+// Question 1
+.question-1-page {
     &::after {
         content: "";
     }
 }
 
-// Step 2
-.step-2-page {
+// Question 2
+.question-2-page {
     &::after {
         content: "";
     }
 }
 
-// Step 3
-.step-3-page {
+// Question 3
+.question-3-page {
     &::after {
         content: "";
     }
 }
 
-// Step 4
-.step-4-page {
+// Question 4
+.question-4-page {
     &::after {
         content: "";
     }
 }
 
-// Step 5
-.step-5-page {
+// Question 5
+.question-5-page {
     &::after {
         content: "";
     }
