@@ -58,14 +58,31 @@ class TriviaController extends Controller
 
         switch ($next) {
             case 2:
+                // Store answer from question-1
+                $store['choice1'] = intval($choice);
+                Cookie::queue($this->storeName, json_encode($store), $this->storeTime);
+
                 return view('question-2');
             case 3:
+                // Store answer from question-2
+                $store['choice2'] = intval($choice);
+                Cookie::queue($this->storeName, json_encode($store), $this->storeTime);
+
                 return view('question-3');
             case 4:
+                // Store answer from question-3
+                $store['choice3'] = intval($choice);
+                Cookie::queue($this->storeName, json_encode($store), $this->storeTime);
+
                 return view('question-4');
             case 5:
+                // Store answer from question-4
+                $store['choice4'] = intval($choice);
+                Cookie::queue($this->storeName, json_encode($store), $this->storeTime);
+
                 return view('question-5');
             case -1:
+                $store['choice5'] = intval($choice); // Store answer from question-5
                 $store['isFinished'] =  true; // So user can't redo trivia
                 $store['endTime'] = now(); // endTime for Trivia
 
