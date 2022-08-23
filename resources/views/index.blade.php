@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="p-3 p-md-5 mb-4 bg-light rounded-3 shadow">
+                <div class="position-relative p-3 p-md-5 mb-4 bg-light rounded-3 shadow">
                     <div class="jumbotron container-fluid text-center">
                         <h1 class="display-6 display-md-5 fw-bold">Five Question Trivia</h1>
 
@@ -28,9 +28,9 @@
                         <p class="misdirection-disclaimer text-muted mt-1">
                             By selecting 'Start', you consent to participate in this research.
                         </p>
-
-                        @include('includes.primed')
                     </div>
+
+                    @include('includes.mere-exposure')
                 </div>
 
             </div>

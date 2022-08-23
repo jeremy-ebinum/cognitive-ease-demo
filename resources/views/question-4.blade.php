@@ -7,12 +7,12 @@
 @section('header')
     @include('includes.header', [
         'headerTitle' => 'Question 4/5',
-        'category' => 'Animals',
         'hasTimer' => true,
     ])
 @endsection
 
 @include('includes.question', [
+    'category' => 'Animals',
     'questionNum' => 4,
     'questionPrompt' => 'Which of the following is another name for the "Poecilotheria Metallica Tarantula"?',
     'choice1' => 'Silver Stripe',

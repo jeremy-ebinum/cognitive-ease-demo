@@ -7,12 +7,12 @@
 @section('header')
     @include('includes.header', [
         'headerTitle' => 'Question 5/5',
-        'category' => 'History',
         'hasTimer' => true,
     ])
 @endsection
 
 @include('includes.question', [
+    'category' => 'History',
     'questionNum' => 5,
     'questionPrompt' => 'The pantheon in Rome was used to worship what god?',
     'choice1' => 'Athena',

@@ -7,12 +7,12 @@
 @section('header')
     @include('includes.header', [
         'headerTitle' => 'Question 1/5',
-        'category' => 'Geography',
         'hasTimer' => true,
     ])
 @endsection
 
 @include('includes.question', [
+    'category' => 'Geography',
     'questionNum' => 1,
     'questionPrompt' => 'Which of these countries is NOT a part of the Asian continent?',
     'choice1' => 'Russia',

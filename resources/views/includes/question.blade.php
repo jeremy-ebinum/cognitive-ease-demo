@@ -2,8 +2,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="p-3 p-md-5 mb-4 bg-light rounded-3 shadow-sm">
+                <div class="overlay-container position-relative p-3 p-md-5 mb-4 bg-light rounded-3 shadow-sm">
                     <div class="jumbotron container">
+                        <p class="category fs-4 text-muted text-center">— {{ $category }} —</p>
+
                         <p class="fs-5">{{ $questionPrompt }}</p>
 
                         <form action="{{ route('start') }}" method="POST" enctype="multipart/form-data">
@@ -70,12 +72,17 @@
                             @endif
 
                         </form>
-
-                        {{-- Show Primed Choice For Questions 1 - 4 --}}
-                        @if (in_array($questionNum, range(1, 4)))
-                            @include('includes.primed')
-                        @endif
                     </div>
+
+                    {{-- Show Primed Choice For Questions 1 - 4 --}}
+                    @if (in_array($questionNum, range(1, 4)))
+                        @include('includes.mere-exposure')
+                    @endif
+
+                    {{-- Show primed idea image for Question 3 --}}
+                    @if ($questionNum === 3)
+                        <div class="overlay rounded-3"></div>
+                    @endif
                 </div>
 
             </div>

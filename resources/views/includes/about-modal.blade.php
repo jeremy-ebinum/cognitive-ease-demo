@@ -81,6 +81,13 @@
                     </li>
                 </ul>
 
+                <h5>Attribution</h5>
+
+                <ul>
+                    <li>Question 3 Overlay Image -
+                        <a href="https://www.vecteezy.com/free-vector/chess">Chess Vectors by Vecteezy</a>
+                    </li>
+                </ul>
             </div>
 
         </div>

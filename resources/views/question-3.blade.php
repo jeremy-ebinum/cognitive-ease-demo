@@ -7,12 +7,12 @@
 @section('header')
     @include('includes.header', [
         'headerTitle' => 'Question 3/5',
-        'category' => 'Board Games',
         'hasTimer' => true,
     ])
 @endsection
 
 @include('includes.question', [
+    'category' => 'Board Games',
     'questionNum' => 3,
     'questionPrompt' => 'What is the world\'s oldest board game?',
     'choice1' => 'Go',
