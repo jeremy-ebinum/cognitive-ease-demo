@@ -12,12 +12,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+                <div class="p-3 p-md-5 mb-4 bg-light rounded-3 shadow-sm">
                     <div class="container-fluid text-center">
-                        <h1 class="display-5 fw-bold text-success">Thank you!</h1>
-                        <p class="fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam velit in maxime eaque
-                            voluptatem ullam, blanditiis vel, facilis obcaecati optio nisi molestias dicta, vero asperiores
-                            quo necessitatibus sed perferendis ex?.</p>
+                        <h1 class="display-6 display-md-5 fw-bold text-success">Thank you!</h1>
+                        <p class="fs-4">Thank you for participating in this research project.</p>
+                        <p class="fs-5">To learn about Cognitive Ease, select 'About'.</p>
                     </div>
                 </div>
 

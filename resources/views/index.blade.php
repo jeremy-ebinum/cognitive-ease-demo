@@ -21,7 +21,7 @@
                         <p>For each question, select the option you believe is the correct answer.
                         </p>
 
-                        <a class="btn btn-primary btn-md text-uppercase"
+                        <a class="btn btn-primary text-uppercase"
                            href="{{ route('start') }}">
                             Start
                         </a>
