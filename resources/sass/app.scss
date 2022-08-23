@@ -122,7 +122,9 @@ body {
     .choice1-label,
     .choice2-label,
     .choice4-label {
+        font-size: 75%;
         font-family: "Sans Forgetica", sans-serif;
+        color: $text-muted;
     }
 }
 

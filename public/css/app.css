@@ -9494,7 +9494,9 @@ body {
 .question-2-page .choice1-label,
 .question-2-page .choice2-label,
 .question-2-page .choice4-label {
+  font-size: 75%;
   font-family: "Sans Forgetica", sans-serif;
+  color: #666;
 }
 
 .question-3-page .overlay-container {
