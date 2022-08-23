@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
-                    <div class="container">
+                    <div class="jumbotron container">
                         <p class="fs-5">{{ $questionPrompt }}</p>
 
                         <form action="{{ route('start') }}" method="POST" enctype="multipart/form-data">
@@ -70,6 +70,11 @@
                             @endif
 
                         </form>
+
+                        {{-- Show Primed Choice For Questions 1 - 4 --}}
+                        @if (in_array($questionNum, range(1, 4)))
+                            @include('includes.primed')
+                        @endif
                     </div>
                 </div>
 

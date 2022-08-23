@@ -13,7 +13,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="p-5 mb-4 bg-light rounded-3 shadow">
-                    <div class="container-fluid text-center">
+                    <div class="jumbotron container-fluid text-center">
                         <h1 class="display-5 fw-bold">Five Question Trivia</h1>
 
                         <p>You will be posed with a series of questions.</p>
@@ -25,6 +25,8 @@
                            href="{{ route('start') }}">
                             Start
                         </a>
+
+                        @include('includes.primed')
                     </div>
                 </div>
 

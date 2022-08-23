@@ -38,13 +38,13 @@
 </head>
 
 <body class="@yield('page-class')">
+    @include('includes.helper-js')
+
     @yield('header')
 
     @yield('content')
 
     @yield('footer')
-
-    @include('includes.helper-js')
 
     @yield('body-scripts')
 
