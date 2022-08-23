@@ -8,7 +8,7 @@ return [
         'question-1' => 1,
         'question-2' => 3,
         'question-3' => 2,
-        'question-4' => 1,
+        'question-4' => 4,
         'question-5' => 4
     ),
     'CORRECT_CHOICES' => array(

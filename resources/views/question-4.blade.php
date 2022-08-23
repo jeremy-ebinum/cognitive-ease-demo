@@ -14,10 +14,10 @@
 @include('includes.question', [
     'category' => 'Animals',
     'questionNum' => 4,
-    'questionPrompt' => 'Which of the following is another name for the "Poecilotheria Metallica Tarantula"?',
-    'choice1' => 'Silver Stripe',
-    'choice2' => 'Hopper',
-    'choice3' => 'Woebegone',
+    'questionPrompt' => 'Which of the following is another name for the Peacock Tarantula?',
+    'choice1' => 'Poecilotheria hanumavilasumica',
+    'choice2' => 'Poecilotheria tigrinawesseli',
+    'choice3' => 'Poecilotheria fasciata',
     'choice4' => 'Gooty',
     'next' => 5,
 ])
