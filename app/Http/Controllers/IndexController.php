@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Str;
 
+use App\Models\Trivia;
+
 class IndexController extends Controller
 {
     private string $storeName;
@@ -29,6 +31,12 @@ class IndexController extends Controller
         $notHasStore = !Cookie::has($this->storeName);
         $hasWrongVersion = Cookie::has($this->storeName) &&
             json_decode(Cookie::get($this->storeName), true)['version'] !== $this->version;
+
+        // Delete old trivia record if version changed
+        if ($hasWrongVersion) {
+            $oldUserId = json_decode(Cookie::get($this->storeName), true)['userId'];
+            Trivia::where('user_id', $oldUserId)->delete();
+        }
 
         // Initialize Store with unique userId and current application version
         if ($notHasStore || $hasWrongVersion) {

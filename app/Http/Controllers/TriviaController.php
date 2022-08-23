@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 
+use App\Models\Trivia;
+
+use Carbon\Carbon;
+
 class TriviaController extends Controller
 {
 
@@ -84,11 +88,29 @@ class TriviaController extends Controller
             case -1:
                 $store['choice5'] = intval($choice); // Store answer from question-5
                 $store['isFinished'] =  true; // So user can't redo trivia
-                $store['endTime'] = now(); // endTime for Trivia
+                $store['finishTime'] = now(); // endTime for Trivia
 
                 Cookie::queue($this->storeName, json_encode($store), $this->storeTime);
 
-                return view('finish');
+                // Save Trivia if not exists
+                $userHasTrivia = Trivia::where('user_id', $store['userId'])->exists();
+
+                if (!$userHasTrivia) {
+                    $trivia = new Trivia([
+                        'user_id' => $store['userId'],
+                        'choice_1' => $store['choice1'],
+                        'choice_2' => $store['choice2'],
+                        'choice_3' => $store['choice3'],
+                        'choice_4' => $store['choice4'],
+                        'choice_5' => $store['choice5'],
+                        'start_time' => Carbon::parse($store['startTime']),
+                        'finish_time' => Carbon::parse($store['finishTime']),
+                    ]);
+
+                    $trivia->save();
+                }
+
+                return redirect('/');
             default:
                 abort(404, 'Not Found');
         }

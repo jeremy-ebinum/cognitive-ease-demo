@@ -23,6 +23,8 @@ class CreateTriviaTable extends Migration
             $table->unsignedSmallInteger('choice_5');
             $table->dateTime('start_time');
             $table->dateTime('finish_time');
+
+            $table->index(['user_id']);
         });
     }
 
