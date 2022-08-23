@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+                <div class="p-3 p-md-5 mb-4 bg-light rounded-3 shadow-sm">
                     <div class="jumbotron container">
                         <p class="fs-5">{{ $questionPrompt }}</p>
 

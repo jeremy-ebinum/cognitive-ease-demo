@@ -7,7 +7,7 @@
 @section('header')
     @include('includes.header', [
         'headerTitle' => 'Question 2/5',
-        'category' => 'Entertainment: Film',
+        'category' => 'Film',
         'hasTimer' => true,
     ])
 @endsection

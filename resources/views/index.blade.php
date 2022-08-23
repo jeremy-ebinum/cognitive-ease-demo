@@ -12,9 +12,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="p-5 mb-4 bg-light rounded-3 shadow">
+                <div class="p-3 p-md-5 mb-4 bg-light rounded-3 shadow">
                     <div class="jumbotron container-fluid text-center">
-                        <h1 class="display-5 fw-bold">Five Question Trivia</h1>
+                        <h1 class="display-6 display-md-5 fw-bold">Five Question Trivia</h1>
 
                         <p>You will be posed with a series of questions.</p>
 
