@@ -1,8 +1,8 @@
-<span id="timer" class="timer navbar-brand mb-0">00:30</span>
+<span id="timer" class="timer navbar-brand mb-0">00:20</span>
 
 {{-- Adapted from: https://stackoverflow.com/questions/20618355/how-to-write-a-countdown-timer-in-javascript --}}
 <script>
-    let duration = 30, // seconds
+    let duration = 20, // seconds
         timeLeft = duration,
         minutes, seconds;
     let timerElem = document.querySelector('#timer');
