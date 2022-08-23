@@ -8,6 +8,7 @@
     @include('includes.header', [
         'headerTitle' => 'Question 4/5',
         'category' => 'Animals',
+        'hasTimer' => true,
     ])
 @endsection
 

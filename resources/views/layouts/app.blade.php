@@ -37,7 +37,7 @@
     </script>
 </head>
 
-<body class="@yield('page-class')" style="opacity: 0">
+<body class="@yield('page-class')">
     @yield('header')
 
     @yield('content')

@@ -21,9 +21,26 @@ body {
     min-height: 100vh;
     flex-direction: column;
 
-    transition: opacity 0.5s ease-in;
-    -moz-transition: opacity 0.5s ease-in;
-    -webkit-transition: opacity 0.5s ease-in;
+    opacity: 0;
+
+    transition: opacity 0.35s ease-in;
+    -moz-transition: opacity 0.35s ease-in;
+    -webkit-transition: opacity 0.35s ease-in;
+}
+
+// Header
+.header {
+    span {
+        min-width: 0;
+    }
+}
+
+.timer {
+    opacity: 1;
+
+    transition: opacity 0.35s ease-in;
+    -moz-transition: opacity 0.35s ease-in;
+    -webkit-transition: opacity 0.35s ease-in;
 }
 
 // Header
