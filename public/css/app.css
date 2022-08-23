@@ -8546,6 +8546,10 @@ body {
   -webkit-transition: opacity 125ms ease-out;
 }
 
+.index-page .misdirection-disclaimer {
+  font-size: 0.5rem;
+}
+
 .question-1-page .choice1-label {
   color: green;
 }

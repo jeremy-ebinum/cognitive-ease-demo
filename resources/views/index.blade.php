@@ -21,10 +21,14 @@
                         <p>For each question, select the option you believe is the correct answer.
                         </p>
 
-                        <a class="btn btn-primary text-uppercase"
+                        <a class="btn btn-primary btn-lg text-uppercase"
                            href="{{ route('start') }}">
                             Start
                         </a>
+
+                        <p class="misdirection-disclaimer text-muted mt-1">
+                            By selecting 'Start', you consent to participate in this research.
+                        </p>
 
                         @include('includes.primed')
                     </div>
