@@ -1,18 +1,17 @@
 /* ==[ FONTS ]== */
-// @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 /* ==[ VARIABLES ]== */
 @import "variables";
 
 /* ==[ BOOTSWATCH ]== */
-@import "~bootswatch/dist/zephyr/variables";
+@import "~bootswatch/dist/materia/variables";
 
 /* ==[ BOOTSTRAP ]== */
 // @import "~bootstrap/scss/bootstrap";
 @import "vendors/bootstrap";
 
 /* ==[ BOOTSWATCH ]== */
-@import "~bootswatch/dist/zephyr/bootswatch";
+@import "~bootswatch/dist/materia/bootswatch";
 
 /* ==[ BASE ]== */
 body {
@@ -81,8 +80,31 @@ body {
 
 // Question 1
 .question-1-page {
+    // First radio is third child of parent
+    .form-check:nth-child(3) {
+        input[type="radio"] {
+            margin-right: 0.7em;
+        }
+    }
+
     .choice1-label {
-        color: green;
+        font-weight: bold;
+        transform: scale(1.25);
+    }
+
+    .choice2-label {
+        color: $text-muted;
+        font-size: 75%;
+    }
+
+    .choice3-label {
+        color: $text-muted;
+        font-size: 75%;
+    }
+
+    .choice4-label {
+        color: $text-muted;
+        font-size: 75%;
     }
 }
 
@@ -104,12 +126,5 @@ body {
 .question-4-page {
     .choice1-label {
         color: green;
-    }
-}
-
-// Finish
-.finish-page {
-    &::after {
-        content: "";
     }
 }

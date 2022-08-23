@@ -18,8 +18,7 @@
 
                         <p>You will be posed with a series of questions.</p>
 
-                        <p>For each question, select the option you believe is the correct answer.
-                        </p>
+                        <p>For each question, please select a choice within the time limit of 30 seconds.</p>
 
                         <a class="btn btn-primary btn-lg text-uppercase"
                            href="{{ route('start') }}">

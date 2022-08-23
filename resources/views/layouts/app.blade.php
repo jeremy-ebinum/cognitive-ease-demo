@@ -22,11 +22,6 @@
         <script src="{{ asset('js/vendor.js') }}" defer></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
-
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @show

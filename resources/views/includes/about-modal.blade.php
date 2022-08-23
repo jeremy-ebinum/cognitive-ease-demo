@@ -5,7 +5,7 @@
                 <h4 class="modal-title text-uppercase" id="aboutModalLabel">About</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body pt-0">
+            <div class="modal-body">
                 <h5>The Project</h5>
 
                 <p>Cognitive Ease is quite simply the ease with which our brain processes information; this quality
