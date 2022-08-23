@@ -1,3 +1,4 @@
+@import url(http://fonts.cdnfonts.com/css/sans-forgetica);
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);
 @charset "UTF-8";
 /* ==[ FONTS ]== */
@@ -9487,7 +9488,13 @@ body {
 }
 
 .question-2-page .choice3-label {
-  color: green;
+  font-weight: bold;
+  color: #9a382d;
+}
+.question-2-page .choice1-label,
+.question-2-page .choice2-label,
+.question-2-page .choice4-label {
+  font-family: "Sans Forgetica", sans-serif;
 }
 
 .question-3-page .choice2-label {

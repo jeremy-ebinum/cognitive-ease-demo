@@ -1,4 +1,5 @@
 /* ==[ FONTS ]== */
+@import url("http://fonts.cdnfonts.com/css/sans-forgetica");
 
 /* ==[ VARIABLES ]== */
 @import "variables";
@@ -78,7 +79,7 @@ body {
     }
 }
 
-// Question 1
+// Question 1 -> choice1 is deceptive
 .question-1-page {
     // First radio is third child of parent
     .form-check:nth-child(3) {
@@ -108,10 +109,17 @@ body {
     }
 }
 
-// Question 2
+// Question 2 -> choice3 is deceptive
 .question-2-page {
     .choice3-label {
-        color: green;
+        font-weight: bold;
+        color: #9a382d;
+    }
+
+    .choice1-label,
+    .choice2-label,
+    .choice4-label {
+        font-family: "Sans Forgetica", sans-serif;
     }
 }
 
