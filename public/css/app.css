@@ -8798,28 +8798,32 @@ body {
   -webkit-transition: opacity 0.5s ease-in;
 }
 
+.header span {
+  min-width: 0;
+}
+
 .index-page::after {
   content: "";
 }
 
-.question-1-page::after {
-  content: "";
+.question-1-page .choice1-label {
+  color: green;
 }
 
-.question-2-page::after {
-  content: "";
+.question-2-page .choice3-label {
+  color: green;
 }
 
-.question-3-page::after {
-  content: "";
+.question-3-page .choice2-label {
+  color: green;
 }
 
-.question-4-page::after {
-  content: "";
+.question-4-page .choice1-label {
+  color: green;
 }
 
-.question-5-page::after {
-  content: "";
+.question-5-page .choice4-label {
+  color: green;
 }
 
 .finish-page::after {

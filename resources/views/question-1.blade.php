@@ -5,16 +5,19 @@
 @section('page-class', 'question-1-page')
 
 @section('header')
-    @include('includes.header', ['headerTitle' => 'Question 1/5'])
+    @include('includes.header', [
+        'headerTitle' => 'Question 1/5',
+        'category' => 'Geography',
+    ])
 @endsection
 
 @include('includes.question', [
     'questionNum' => 1,
-    'questionPrompt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem.',
-    'choice1' => 'Choice 1',
-    'choice2' => 'Choice 2',
-    'choice3' => 'Choice 3',
-    'choice4' => 'Choice 4',
+    'questionPrompt' => 'Which of these countries is NOT a part of the Asian continent?',
+    'choice1' => 'Russia',
+    'choice2' => 'Singapore',
+    'choice3' => 'Suriname',
+    'choice4' => 'Georgia',
     'next' => 2,
 ])
 

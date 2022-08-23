@@ -5,16 +5,19 @@
 @section('page-class', 'question-3-page')
 
 @section('header')
-    @include('includes.header', ['headerTitle' => 'Question 3/5'])
+    @include('includes.header', [
+        'headerTitle' => 'Question 3/5',
+        'category' => 'Entertainment: Board Games',
+    ])
 @endsection
 
 @include('includes.question', [
     'questionNum' => 3,
-    'questionPrompt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem.',
-    'choice1' => 'Choice 1',
-    'choice2' => 'Choice 2',
-    'choice3' => 'Choice 3',
-    'choice4' => 'Choice 4',
+    'questionPrompt' => 'What is the world\'s oldest board game?',
+    'choice1' => 'Go',
+    'choice2' => 'Chess',
+    'choice3' => 'Checkers',
+    'choice4' => 'Senet',
     'next' => 4,
 ])
 

@@ -5,16 +5,19 @@
 @section('page-class', 'question-4-page')
 
 @section('header')
-    @include('includes.header', ['headerTitle' => 'Question 4/5'])
+    @include('includes.header', [
+        'headerTitle' => 'Question 4/5',
+        'category' => 'Animals',
+    ])
 @endsection
 
 @include('includes.question', [
     'questionNum' => 4,
-    'questionPrompt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem.',
-    'choice1' => 'Choice 1',
-    'choice2' => 'Choice 2',
-    'choice3' => 'Choice 3',
-    'choice4' => 'Choice 4',
+    'questionPrompt' => 'Which of the following is another name for the "Poecilotheria Metallica Tarantula"?',
+    'choice1' => 'Silver Stripe',
+    'choice2' => 'Hopper',
+    'choice3' => 'Woebegone',
+    'choice4' => 'Gooty',
     'next' => 5,
 ])
 

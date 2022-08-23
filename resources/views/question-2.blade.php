@@ -5,16 +5,19 @@
 @section('page-class', 'question-2-page')
 
 @section('header')
-    @include('includes.header', ['headerTitle' => 'Question 2/5'])
+    @include('includes.header', [
+        'headerTitle' => 'Question 2/5',
+        'category' => 'Entertainment: Film',
+    ])
 @endsection
 
 @include('includes.question', [
     'questionNum' => 2,
-    'questionPrompt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem.',
-    'choice1' => 'Choice 1',
-    'choice2' => 'Choice 2',
-    'choice3' => 'Choice 3',
-    'choice4' => 'Choice 4',
+    'questionPrompt' => 'What did Alfred Hitchcock use as blood in the film "Psycho"?',
+    'choice1' => 'Chocolate syrup',
+    'choice2' => 'Red food coloring',
+    'choice3' => 'Ketchup',
+    'choice4' => 'Maple syrup',
     'next' => 3,
 ])
 

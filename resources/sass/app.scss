@@ -26,6 +26,13 @@ body {
     -webkit-transition: opacity 0.5s ease-in;
 }
 
+// Header
+.header {
+    span {
+        min-width: 0;
+    }
+}
+
 // Index
 .index-page {
     &::after {
@@ -35,36 +42,36 @@ body {
 
 // Question 1
 .question-1-page {
-    &::after {
-        content: "";
+    .choice1-label {
+        color: green;
     }
 }
 
 // Question 2
 .question-2-page {
-    &::after {
-        content: "";
+    .choice3-label {
+        color: green;
     }
 }
 
 // Question 3
 .question-3-page {
-    &::after {
-        content: "";
+    .choice2-label {
+        color: green;
     }
 }
 
 // Question 4
 .question-4-page {
-    &::after {
-        content: "";
+    .choice1-label {
+        color: green;
     }
 }
 
 // Question 5
 .question-5-page {
-    &::after {
-        content: "";
+    .choice4-label {
+        color: green;
     }
 }
 

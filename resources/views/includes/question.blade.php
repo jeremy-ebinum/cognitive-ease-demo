@@ -4,7 +4,7 @@
             <div class="col-md-10">
                 <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
                     <div class="container">
-                        <p class="fs-4">{{ $questionPrompt }}</p>
+                        <p class="fs-5">{{ $questionPrompt }}</p>
 
                         <form action="{{ route('start') }}" method="POST" enctype="multipart/form-data">
                             @csrf
@@ -20,7 +20,7 @@
                                        id="choice1"
                                        value="1"
                                        required>
-                                <label class="form-check-label" for="choice1">
+                                <label class="form-check-label choice1-label" for="choice1">
                                     {{ $choice1 }}
                                 </label>
                             </div>
@@ -33,7 +33,7 @@
                                        id="choice2"
                                        value="2">
 
-                                <label class="form-check-label" for="choice2">
+                                <label class="form-check-label choice2-label" for="choice2">
                                     {{ $choice2 }}
                                 </label>
                             </div>
@@ -45,7 +45,7 @@
                                        name="choice"
                                        id="choice3"
                                        value="3">
-                                <label class="form-check-label" for="choice3">
+                                <label class="form-check-label choice3-label" for="choice3">
                                     {{ $choice3 }}
                                 </label>
                             </div>
@@ -57,7 +57,7 @@
                                        name="choice"
                                        id="choice4"
                                        value="4">
-                                <label class="form-check-label" for="choice4">
+                                <label class="form-check-label choice4-label" for="choice4">
                                     {{ $choice4 }}
                                 </label>
                             </div>
